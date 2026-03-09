@@ -1,6 +1,7 @@
 # OPENDAQ
 Racing is expensive enough. Knowing your car's dynamics should NOT be.
 Raspberry Pi-based data logger that captures real vehicle dynamics for under $70. Freely available to EVERYONE! 🏁
+
 What It Does
 Records high-resolution IMU data from your vehicle:
 
@@ -9,8 +10,10 @@ Angular velocity: Pitch, roll, yaw in deg/s
 Orientation tracking: Real-time vehicle attitude
 
 Originally built to correlate lateral G-force with rotational yaw to analyze steering balance on our SAE Baja car. Turns out it's pretty handy for any vehicle dynamics work.
+
 Why This Exists
 Professional motorsports data loggers cost thousands of dollars. This does the core job for under $70 using a Raspberry Pi and an IMU sensor. No subscription. No cloud dependency. Just raw data you own.
+
 Hardware Requirements
 
 Raspberry Pi (any model with GPIO)
@@ -20,16 +23,12 @@ Power supply
 Basic wiring supplies
 
 Total cost: ~$50-70 (depending on Pi availability)
+
+
 Quick Start
 
 Hardware setup: See TECHNICAL_REFERENCE.md for complete build instructions
-Software install:
 
-bash   git clone https://github.com/YourUsername/OpenDAQ-IMU-Logger.git
-   cd OpenDAQ-IMU-Logger
-   # Follow setup in TECHNICAL_REFERENCE.md
-
-Run it: Start logging and go drive!
 
 Open Source*
 This project is 99% open source. The only proprietary component is the WitMotion Python library for sensor communication. Everything else—hardware design, wiring, configuration, analysis—is fully documented and modifiable.
