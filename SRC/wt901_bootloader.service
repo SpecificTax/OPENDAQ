@@ -1,0 +1,18 @@
+[Unit]
+Description=WT901 IMU Bootloader Supervisor
+After=network.target
+
+[Service]
+Type=simple
+User=m1000
+Group=m1000
+WorkingDirectory=/home/m1000/wt901
+ExecStart=/home/m1000/wt901/run_bootloader.sh
+Restart=always
+Restart=on-failure
+Environment="PATH=/home/m1000/wt901/bin:/usr/bin:/bin"
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
