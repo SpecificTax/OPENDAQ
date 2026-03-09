@@ -1,6 +1,7 @@
 # OPENDAQ
 Racing is expensive enough. Knowing your car's dynamics should NOT be.
-Raspberry Pi-based data logger that captures real vehicle dynamics for under $70. Freely available to EVERYONE! 🏁
+Raspberry Pi-based data logger that captures real vehicle dynamics for under $70. 
+Freely available to EVERYONE! 🏁
 
 What It Does:
 Records high-resolution IMU data from your vehicle:
@@ -31,13 +32,12 @@ Hardware setup: See TECHNICAL_REFERENCE for complete build instructions
 Open Source (DISCLAIMER**)
 This project is 99% open source. The only proprietary component is the WitMotion Python library for sensor communication. Everything else—hardware design, wiring, configuration, analysis—is fully documented and modifiable.
 Want to swap the IMU? Use a different sensor? Build your own parser? Go for it. That's the point.
-Documentation
+
+Documentation:
 
 TECHNICAL_REFERENCE.md: Complete build guide, troubleshooting, everything you need to replicate this
 
-
 src/: All the code
-
 
 examples/: Sample data and analysis scripts
 
@@ -49,8 +49,9 @@ I would LOVE to see people carrying this on further.
 
 Quick wins would be automating the flow of .log -> PARSER -> Timestamped CSV ready for analysis.
 
-License!!!
-MIT - Build cool stuff, you have to LMK if you did, however.
+License:
+
+MIT - Build cool stuff, Share what you learned!
 
 SAMPLE OUTPUTS: THIS IS YOUR CHOICE ON DASHBOARDING!
 
