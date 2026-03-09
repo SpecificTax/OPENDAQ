@@ -1,0 +1,17 @@
+[Unit]
+Description=Shutdown Button Monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/imu-datalogger/shutdown_monitor.py
+WorkingDirectory=/home/pi/imu-datalogger
+Restart=on-failure
+RestartSec=5s
+User=pi
+Group=pi
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
