@@ -1,11 +1,46 @@
 # OPENDAQ
-Raspberry pi based open source vehicle telemetry. Racing is expensive enough, knowing dynamics should NOT be. Freely Available to EVERYONE! :)
+Racing is expensive enough. Knowing your car's dynamics should NOT be.
+Raspberry Pi-based data logger that captures real vehicle dynamics for under $70. Freely available to EVERYONE! 🏁
+What It Does
+Records high-resolution IMU data from your vehicle:
 
+Acceleration: X, Y, Z in m/s² or G-force
+Angular velocity: Pitch, roll, yaw in deg/s
+Orientation tracking: Real-time vehicle attitude
 
-Core project was an attempt to read lateral g force and correlate it to processional yaw, over time / frames. This can indicate the steering balance of the vehicle.
+Originally built to correlate lateral G-force with rotational yaw to analyze steering balance on our SAE Baja car. Turns out it's pretty handy for any vehicle dynamics work.
+Why This Exists
+Professional motorsports data loggers cost thousands of dollars. This does the core job for under $70 using a Raspberry Pi and an IMU sensor. No subscription. No cloud dependency. Just raw data you own.
+Hardware Requirements
 
-This project records x,y,z acceleration in m/s or G, angular velocity in deg / s, can determine orientation of pitch, roll, yaw of vehicles.
+Raspberry Pi (any model with GPIO)
+WitMotion IMU sensor (WT901C or similar)
+MicroSD card (16GB+)
+Power supply
+Basic wiring supplies
 
-TOTAL COST should be under seventy USD. PI's are becoming more expensive due to the RAM shortages and companies pivoting away from consumer products, but this unit still is greatly cheaper than any motorsports-oriented data logging..
+Total cost: ~$50-70 (depending on Pi availability)
+Quick Start
 
-This project is 99% open source. the ONLY non-open source feature is the log command itself. WitMotion provides a python library with API calls and a CLI debug tool that outputs the proper data. This behavior is entirely user-configurable, and I hope to see people improve my project further.
+Hardware setup: See TECHNICAL_REFERENCE.md for complete build instructions
+Software install:
+
+bash   git clone https://github.com/YourUsername/OpenDAQ-IMU-Logger.git
+   cd OpenDAQ-IMU-Logger
+   # Follow setup in TECHNICAL_REFERENCE.md
+
+Run it: Start logging and go drive!
+
+Open Source*
+This project is 99% open source. The only proprietary component is the WitMotion Python library for sensor communication. Everything else—hardware design, wiring, configuration, analysis—is fully documented and modifiable.
+Want to swap the IMU? Use a different sensor? Build your own parser? Go for it. That's the point.
+Documentation
+
+TECHNICAL_REFERENCE.md: Complete build guide, troubleshooting, everything you need to replicate this
+src/: All the code
+examples/: Sample data and analysis scripts
+
+Contributing
+Built something cool with this? Fixed a bug? Want to add support for different sensors? PRs welcome! This is for the community.
+License
+MIT - Build cool stuff, share what you learn.
